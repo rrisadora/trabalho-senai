@@ -11,7 +11,7 @@ import io.swagger.v3.oas.annotations.info.Info;
     info = @Info(
         title = "Filmes",
         version = "1.0",
-        description = "Entretenimento para a galera"
+        description = "Participantes: Gabriela Werneck, Gabrielle Gomes, Isadora Rodrigues e Maria Laura Santos - 2° Info A"
     )
 )
 public class Swagger {
