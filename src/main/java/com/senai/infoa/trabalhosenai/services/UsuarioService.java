@@ -26,4 +26,15 @@ public class UsuarioService {
         }
         return null;
     }
+
+   public boolean atualizarBoolean(Usuario usuario, Integer usuarioId){               
+            if (usuarioRepository.existsById(usuarioId)){
+                usuario.setUsuarioId(usuarioId);                                           
+                usuarioRepository.save(usuario);
+                return true;
+            }
+            return false;
+
+        }
+
 }
