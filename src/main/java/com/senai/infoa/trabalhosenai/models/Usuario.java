@@ -34,8 +34,8 @@ public class Usuario {
     @Column(name="cpf")
     private String cpf;
 
-      @ManyToOne
-    @JoinColumn (name="endereco_id", nullable = false)
+    @ManyToOne
+    @JoinColumn (name="endereco_id")
     private Endereco endereco;
 
     public Usuario() {}

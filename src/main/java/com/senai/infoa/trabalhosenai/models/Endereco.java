@@ -41,15 +41,6 @@ public class Endereco {
     @Column(name="referencia")
     private String referencia;
 
-    @OneToMany
-    @JoinTable(
-        name = "endereco_usuario",   
-        joinColumns = @JoinColumn(name = "endereco_id", referencedColumnName = "endereco_id"),
-        inverseJoinColumns = @JoinColumn(name = "usuario_id", referencedColumnName = "usuario_id")
-    )
-
-    private List<Usuario> usuarios;
-
     public Endereco() {}
 
     public Endereco(String logradouro, String localidade, String cep, int numero, String complemento, String bairro, String referencia ){

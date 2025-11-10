@@ -3,6 +3,7 @@ package com.senai.infoa.trabalhosenai.services;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+
 import com.senai.infoa.trabalhosenai.models.Usuario;
 import com.senai.infoa.trabalhosenai.repositories.UsuarioRepository;
 
@@ -35,6 +36,10 @@ public class UsuarioService {
             }
             return false;
 
+        }
+
+        public Usuario buscar(Integer usuarioId){               
+            return usuarioRepository.findById(usuarioId).get();   
         }
 
 }

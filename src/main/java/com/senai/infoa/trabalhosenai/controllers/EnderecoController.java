@@ -24,7 +24,7 @@ public class EnderecoController {
  }
 
   @GetMapping("/buscar/{id}")
-    public Endereco buscar(@PathVariable Integer enderecoId){
-        return enderecoService.buscar(enderecoId); 
+    public Endereco buscar(@PathVariable Integer id){
+        return enderecoService.buscar(id); 
 }
 }
