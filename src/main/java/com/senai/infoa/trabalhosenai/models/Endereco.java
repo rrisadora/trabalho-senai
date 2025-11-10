@@ -1,15 +1,11 @@
 package com.senai.infoa.trabalhosenai.models;
 
-import java.util.List;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
-import jakarta.persistence.JoinColumn;
-import jakarta.persistence.JoinTable;
-import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
 
 @Entity
@@ -30,7 +26,7 @@ public class Endereco {
     private String cep;
 
     @Column(name="numero")
-    private int numero;
+    private String numero;
 
     @Column(name="complemento")
     private String complemento;
@@ -43,7 +39,7 @@ public class Endereco {
 
     public Endereco() {}
 
-    public Endereco(String logradouro, String localidade, String cep, int numero, String complemento, String bairro, String referencia ){
+    public Endereco(String logradouro, String localidade, String cep, String numero, String complemento, String bairro, String referencia ){
         this.logradouro = logradouro;
         this.localidade = localidade;
         this.cep = cep;
@@ -85,11 +81,11 @@ public class Endereco {
         this.cep = cep;
     }
 
-    public int getNumero() {
+    public String getNumero() {
         return numero;
     }
 
-    public void setNumero(int numero) {
+    public void setNumero(String numero) {
         this.numero = numero;
     }
 
